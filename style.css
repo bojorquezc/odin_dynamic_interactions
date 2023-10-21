@@ -28,15 +28,11 @@ footer, header, hgroup, menu, nav, section {
 }
 
 :root {
-    --color1: #212020;
-    --color2: #ffffff;
-    --color3: #e3ff6f;
-    --color4: #00e500;
-    --color5: #ff5a00;
-    --color6: #00b6df;
-    --color7: #1b2a25;
-    --color8: #f4c500;
-    --color9: #929292;
+    --background: #000000;
+    --primary: #14213D;
+    --accent: #FCA311;
+    --neutral: #E5E5E5;
+    --white: #ffffff;
 }
 
 a, a:visited {
@@ -45,23 +41,45 @@ a, a:visited {
 }
 
 body {
-    background-color: var(--color1);
+    background-color: var(--background);
     color: var(--color2);
+    font-family: 'Lato';
+}
+
+h1 {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0 1rem;
 }
 
 .main_container {
     display: flex;
 }
 
+.title {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+}
+
+.title_logo {
+    filter: invert(1);
+    width: 50px;
+}
+
 .sidebar_menu {
-    padding: 2rem;
-    background-color: var(--color8);
+    align-items: center;
+    background-color: var(--accent);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 3rem 2rem;
 }
 
 .main_navigation {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2rem;
     padding: 2rem;
 }
 
@@ -70,9 +88,22 @@ body {
 }
 
 .main_content {
-    background-color: var(--color9);
-    width: 100vw;
+    background-color: var(--primary);
+    color: var(--white);
     height: 100vh;
+    padding: 3rem;
+    width: 100vw;
+}
+
+.news_section {
+    background-color: aqua;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 90%;
+    margin: 2rem 0;
+    width: 100%;
 }
 
 nav > ul {
