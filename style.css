@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
     --primary: #14213D;
     --secondary: #1f2e4f;
     --accent: #FCA311;
+    --dark-accent: #072232;
     --neutral: #E5E5E5;
     --white: #ffffff;
 }
@@ -47,6 +48,12 @@ body {
 h1 {
     color: var(--white);
     font-size: clamp(3rem, 5vw + 1rem, 5rem);
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
     font-weight: bold;
     padding: 0 1rem;
 }
@@ -84,7 +91,7 @@ nav > ul {
 }
 
 .main_navigation {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 2rem;
     padding: 2rem;
@@ -103,27 +110,36 @@ nav > ul {
     width: 100vw;
 }
 
+.main_sections {
+    display: flex;
+    margin: 2rem 0;
+}
+
+/* News block section */
 .news_section {
     background-color: var(--secondary);
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 2rem 0;
     width: 100%;
 }
 
 .news_section > article {
+    flex-grow: 1;
     width: 300px;
 }
 
 .news_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 1.5rem;
 }
 
 .news_article > img {
     border: 5px solid var(--white);
-    margin-bottom: 0.5rem;
     filter: grayscale(1);
+    margin-bottom: 0.5rem;
 }
 
 .news_article > img:hover {
@@ -134,6 +150,7 @@ nav > ul {
     font-size: 1.5rem;
     font-weight: bold;
     padding-bottom: 0.5rem;
+    color: var(--accent);
 }
 
 .news_article > p {
@@ -142,10 +159,61 @@ nav > ul {
 }
 
 .news_article > button {
-    background-color: var(--accent);
+    background-color: var(--dark-accent);
     border: none;
     color: var(--white);
     font-weight: bold;
     padding: 0.5rem;
-    width: 100%;
+    text-shadow: 0 0 3px #00000052;
+    width: 100%;;
+}
+
+/* Leaderboard block section */
+.leaderboards {
+    background-color: var(--dark-accent);
+    padding: 1rem;
+    width: 250px;
+}
+
+.leaderboards_title {
+    padding-bottom: 1rem;
+}
+
+.leaderboards_subtitle {
+    align-items: center;
+    background-color:#121212;
+    display: flex;
+    padding: 0.2rem 0.5rem;
+}
+
+.leaderboards_subtitle > img {
+    filter: invert(1);
+}
+
+.user_icon > img {
+    filter: invert(1);
+}
+
+.category_block {
+    padding-bottom: 1.2rem;
+}
+
+.category_title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-left: 0.8rem;
+}
+
+.user_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+}
+
+.user_info {
+    display: flex;
+}
+
+.user_name {
+    padding-left: 0.3rem;
 }
