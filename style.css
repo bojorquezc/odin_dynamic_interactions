@@ -123,6 +123,11 @@ nav > ul {
 .news_article > img {
     border: 5px solid var(--white);
     margin-bottom: 0.5rem;
+    filter: grayscale(1);
+}
+
+.news_article > img:hover {
+    filter: grayscale(0);
 }
 
 .news_article > h2 {
