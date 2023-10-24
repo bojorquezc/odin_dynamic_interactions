@@ -7,14 +7,21 @@
     <title>Dynamic Interactions</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <script src="./interactions.js" async></script>
 </head>
 
 <body>
     <div class="main_container">
-
-        <div class="sidebar_menu">
+        <div class="sidebar_menu_closed">
+            <img class ="burger_menu" src="./images/burger_bar.png" alt="burger menu">
             <div class="logo_container">
-                <img class="logo" src="./images/chess.png" alt="chess logo">
+                <img class="logo_closed" src="./images/chess.png" alt="chess logo">
+            </div>
+        </div>
+        <div class="sidebar_menu_open">
+            <img class="close_icon" src="./images/close_icon.png" alt="close icon">
+            <div class="logo_container">
+                <img class="logo_open" src="./images/chess.png" alt="chess logo">
             </div>
             <nav class="main_navigation">
                 <ul>
@@ -187,5 +194,17 @@
 
     </div>
 </body>
+<footer>
+    <div class="logo_container">
+        <img class="logo_footer" src="./images/chess.png" alt="chess logo">
+    </div>
+    <div class="legal_container">
+            <div>Privacy Policy</div>
+            <div>Terms of Use</div>
+    </div>
+    <div class="copyright">
+        © 2023 Chess Insider, All Rights Reserved
+    </div>
+</footer>
 
 </html>

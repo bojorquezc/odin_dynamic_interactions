@@ -47,7 +47,7 @@ body {
 
 h1 {
     color: var(--white);
-    font-size: clamp(3rem, 5vw + 1rem, 5rem);
+    font-size: 3rem;
     font-weight: bold;
     padding: 0 1rem;
 }
@@ -82,12 +82,38 @@ nav > ul {
     width: 50px;
 }
 
-.sidebar_menu {
+.sidebar_menu_closed {
     align-items: center;
     background-color: var(--accent);
     display: flex;
     flex-direction: column;
+    padding: 3rem 1rem;
+}
+
+.burger_menu {
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+.sidebar_menu_closed > .logo_container > .logo_closed {
+    width: 50px;
+}
+
+.sidebar_menu_open {
+    align-items: center;
+    background-color: var(--accent);
+    display: none;
+    flex-direction: column;
     padding: 3rem 2rem;
+}
+
+.close_icon {
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+.sidebar_menu_open > .logo_container > .logo_open {
+    width: 100px;
 }
 
 .main_navigation {
@@ -147,10 +173,10 @@ nav > ul {
 }
 
 .news_article > h2 {
+    color: var(--accent);
     font-size: 1.5rem;
     font-weight: bold;
     padding-bottom: 0.5rem;
-    color: var(--accent);
 }
 
 .news_article > p {
@@ -216,4 +242,30 @@ nav > ul {
 
 .user_name {
     padding-left: 0.3rem;
+}
+
+/* Footer section */
+footer {
+    color: var(--white);
+    background-color: #000000;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo_footer {
+    filter: invert(1);
+    width: 65px;
+    padding-bottom: 1rem;
+}
+
+.legal_container {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 0.8rem;
+}
+
+.copyright {
+    font-size: 0.8rem;
 }
