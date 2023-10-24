@@ -109,7 +109,7 @@ nav > ul {
     width: 120px;
 }
 
-.sidebar_menu_closed {
+.sidebar_menu {
     align-items: center;
     background-color: var(--accent);
     display: flex;
@@ -117,39 +117,25 @@ nav > ul {
     height: 100%;
     padding: 3rem 1rem;
     position: fixed;
+    transition: width 700ms ease;
+    width: 3rem;
     z-index: 1;
 }
 
-.burger_menu {
-    cursor: pointer;
-    padding-bottom: 2rem;
+.sidebar_menu:hover {
+    width: 16rem;
 }
 
-.sidebar_menu_closed > .logo_container > .logo_closed {
+.sidebar_menu:hover .main_navigation {
+    display: block;
+}
+
+.sidebar_menu > .logo_container > .logo {
     width: 50px;
 }
 
-.sidebar_menu_open {
-    align-items: center;
-    background-color: var(--accent);
-    display: none;
-    flex-direction: column;
-    padding: 3rem 2rem;
-    position: fixed;
-    height: 100%;
-    z-index: 1;
-}
-
-.close_icon {
-    cursor: pointer;
-    padding-bottom: 2rem;
-}
-
-.sidebar_menu_open > .logo_container > .logo_open {
-    width: 100px;
-}
-
 .main_navigation {
+    display: none;
     font-size: 1rem;
     font-weight: bold;
     line-height: 2rem;
@@ -165,9 +151,9 @@ nav > ul {
     color: var(--white);
     height: 100vh;
     height: fit-content;
+    margin-left: 5rem;
     padding: 3rem;
     width: 100vw;
-    margin-left: 5rem;
 }
 
 .main_sections {
@@ -224,7 +210,6 @@ nav > ul {
     color: var(--white);
     font-weight: bold;
     padding: 0.5rem;
-    text-shadow: 0 0 3px #00000052;
     width: 100%;;
 }
 
@@ -241,7 +226,7 @@ nav > ul {
 
 .leaderboards_subtitle {
     align-items: center;
-    background-color:#121212;
+    background-color:var(--background);
     display: flex;
     padding: 0.2rem 0.5rem;
 }
@@ -281,7 +266,7 @@ nav > ul {
 /* Footer section */
 footer {
     align-items: center;
-    background-color: #000000;
+    background-color: var(--background);
     color: var(--white);
     display: flex;
     flex-direction: column;
