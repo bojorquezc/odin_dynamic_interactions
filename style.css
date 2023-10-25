@@ -117,7 +117,7 @@ nav > ul {
     height: 100%;
     padding: 3rem 1rem;
     position: fixed;
-    transition: width 700ms ease;
+    transition: width 300ms ease;
     width: 3rem;
     z-index: 1;
 }
@@ -126,20 +126,21 @@ nav > ul {
     width: 16rem;
 }
 
+.main_navigation {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2rem;
+    opacity: 0;
+    padding: 2rem;
+    transition: opacity 300ms ease;
+}
+
 .sidebar_menu:hover .main_navigation {
-    display: block;
+    opacity: 1;
 }
 
 .sidebar_menu > .logo_container > .logo {
     width: 50px;
-}
-
-.main_navigation {
-    display: none;
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 2rem;
-    padding: 2rem;
 }
 
 .logo {
@@ -154,6 +155,29 @@ nav > ul {
     margin-left: 5rem;
     padding: 3rem;
     width: 100vw;
+}
+
+.expand_menu {
+    cursor: pointer;
+}
+
+.expand_menu_item {
+    display: none;
+}
+
+.contracted_menu {
+    padding-bottom: 2rem;
+}
+
+.contracted_menu > li {
+    border: 1px solid #ffb000;
+    text-align: center;
+    width: 120px;
+}
+
+.secondary_menu > li {
+    text-align: center;
+    width: 120px;
 }
 
 .main_sections {

@@ -1,21 +1,29 @@
-// const navItem = {
-//     burgerMenu: document.querySelector('.burger_menu'),
-//     closeIcon: document.querySelector('.close_icon'),
-//     sideBarMenuClosed: document.querySelector('.sidebar_menu_closed'),
-//     sideBarMenuOpen: document.querySelector('.sidebar_menu_open'),
-// }
+const expandMenuItem = document.querySelector('.expand_menu');
+expandMenuItem.addEventListener('click', expandAndContractMenu);
 
-// navItem.burgerMenu.addEventListener('click', expandSideBar);
-// navItem.closeIcon.addEventListener('click', contractSideBar);
+function expandAndContractMenu() {
+    const menuItem = document.querySelectorAll('.expand_menu_item');
+    if (expandMenuItem.textContent === 'Expand Menu') {
+        expandMenuItem.textContent = 'Contract Menu';
+        menuItem.forEach((item) => {
+            item.style.display = 'block';
+        })
+    } else {
+        expandMenuItem.textContent = 'Expand Menu';
+        menuItem.forEach((item) => {
+            item.style.display = 'none';
+        })
+    }
+    updateOddBackground();
+}
 
-// function expandSideBar() {
-//     navItem.sideBarMenuOpen.style.display = 'flex';
-//     navItem.sideBarMenuClosed.style.display = 'none';
-//     console.log('expand side bar')
-// }
-
-// function contractSideBar() {
-//     navItem.sideBarMenuOpen.style.display = 'none';
-//     navItem.sideBarMenuClosed.style.display = 'flex';
-//     console.log('contract side bar')
-// }
+function updateOddBackground() {
+    const menuItem = document.querySelectorAll('.expand_menu_item');
+    const array = Array.from(menuItem);
+    array.forEach((item) => {
+        if (array.indexOf(item) % 2 === 0) {
+            item.style.backgroundColor = '#fc9d00';
+            console.log(array.indexOf(item));
+        }
+    })
+}
