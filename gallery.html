@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Interactions</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./gallery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <script src="./interactions.js" async></script>
+    <script src="./gallery.js" async></script>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="mobile_menu_bar">
+            <div class="logo_container">
+                <img class="mobile_logo" src="./images/chess.png" alt="chess logo">
+                <img class="burger_icon" src="./images/burger_bar.png" alt="burger menu">
+            </div>
+        </div>
+        <nav class="main_navigation_mobile">
+            <ul class="contracted_menu_mobile">
+                <li class="expand_menu_mobile">Expand Menu</li>
+                <li class="expand_menu_item_mobile"><a href="./">Expanded 1</a></li>
+                <li class="expand_menu_item_mobile"><a href="./">Expanded 2</a></li>
+                <li class="expand_menu_item_mobile"><a href="./">Expanded 3</a></li>
+                <li class="expand_menu_item_mobile"><a href="./">Expanded 4</a></li>
+            </ul>
+            <ul class="secondary_menu_mobile">
+                <li><a href="./">Home</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar_menu">
+            <div class="logo_container">
+                <img class="logo" src="./images/chess.png" alt="chess logo">
+            </div>
+            <nav class="main_navigation">
+                <ul class="contracted_menu">
+                    <li class="expand_menu">Expand Menu</li>
+                    <li class="expand_menu_item"><a href="./">Expanded 1</a></li>
+                    <li class="expand_menu_item"><a href="./">Expanded 2</a></li>
+                    <li class="expand_menu_item"><a href="./">Expanded 3</a></li>
+                    <li class="expand_menu_item"><a href="./">Expanded 4</a></li>
+                </ul>
+                <ul class="secondary_menu">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./gallery.html">Gallery</a></li>
+                    <li><a href="./">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main class="main_content">
+            <div class="title_section">
+                <div class="title_left">
+                    <div class="title">
+                        <img class="title_logo" src="./images/chess.png" alt="chess logo">
+                        <h1>Chess Insider</h1>
+                    </div>
+                    <p>A dose of daily chess information. News, strategy and more.</p>
+                </div>
+                <div class="title_right">
+                    <input type="text" placeholder="enter search terms">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <div class="slideshow_container">
+                <div class="slideshow_image"></div>
+                <div class="slideshow_carrousel">
+                    <!-- <img src="./images/chess_news_1.png" alt="">
+                    <img src="./images/chess_news_2.png" alt="">
+                    <img src="./images/chess_news_3.png" alt="">
+                    <img src="./images/chess_news_4.png" alt=""> -->
+                </div>
+            </div>
+
+            <footer>
+                <div class="logo_container">
+                    <img class="logo_footer" src="./images/chess.png" alt="chess logo">
+                </div>
+                <div class="legal_container">
+                    <div>Privacy Policy</div>
+                    <div>Terms of Use</div>
+                </div>
+                <div class="copyright">
+                    © 2023 Chess Insider, All Rights Reserved
+                </div>
+            </footer>
+
+</html>

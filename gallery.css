@@ -1,0 +1,10 @@
+.slideshow_container {
+    padding: 4rem;
+}
+
+.slideshow_carrousel {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
