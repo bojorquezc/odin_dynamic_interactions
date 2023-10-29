@@ -52,9 +52,25 @@ showImageInSlideshow = (e) => {
     }
 }
 
-advanceImageCarrousel = () => {
-
+advanceImageCarrousel = (e) => {
+    const lastImageIndex = parseInt(e.target.dataset.arrayIndex);
+    const newFirstImageIndex = lastImageIndex - 2;
+    const newLastImageIndex = lastImageIndex + 1;
+    if (slideShow[newLastImageIndex] !== undefined) {
+        slideShowSection.carrousel.replaceChildren();
+        for (let index = newFirstImageIndex; index <= newLastImageIndex; index += 1) {
+            const carrouselImage = document.createElement('img');
+            carrouselImage.src = slideShow[index];
+            carrouselImage.dataset.arrayIndex = index;
+            carrouselImage.addEventListener('click', showImageInSlideshow);
+            slideShowSection.carrousel.appendChild(carrouselImage);
+        }
+        slideShowSection.leftArrow.dataset.arrayIndex = newFirstImageIndex;
+        slideShowSection.rightArrow.dataset.arrayIndex = newLastImageIndex;
+    }
 }
+
+slideShowSection.rightArrow.addEventListener('click', advanceImageCarrousel);
 
 firstLoadImageCarrousel();
 firstLoadImageSlideShow();
