@@ -70,6 +70,25 @@ advanceImageCarrousel = (e) => {
     }
 }
 
+regressImageCarrousel = (e) => {
+    const lastImageIndex = parseInt(e.target.dataset.arrayIndex);
+    const newFirstImageIndex = lastImageIndex - 1;
+    const newLastImageIndex = lastImageIndex + 2;
+    if (slideShow[newFirstImageIndex] !== undefined) {
+        slideShowSection.carrousel.replaceChildren();
+        for (let index = newFirstImageIndex; index <= newLastImageIndex; index += 1) {
+            const carrouselImage = document.createElement('img');
+            carrouselImage.src = slideShow[index];
+            carrouselImage.dataset.arrayIndex = index;
+            carrouselImage.addEventListener('click', showImageInSlideshow);
+            slideShowSection.carrousel.appendChild(carrouselImage);
+        }
+        slideShowSection.leftArrow.dataset.arrayIndex = newFirstImageIndex;
+        slideShowSection.rightArrow.dataset.arrayIndex = newLastImageIndex;
+    }
+}
+
+slideShowSection.leftArrow.addEventListener('click', regressImageCarrousel);
 slideShowSection.rightArrow.addEventListener('click', advanceImageCarrousel);
 
 firstLoadImageCarrousel();
