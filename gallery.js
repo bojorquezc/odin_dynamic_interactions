@@ -1,11 +1,13 @@
 let slideShow = [];
 slideShow = [
-    './images/chess_news_1.png',
-    './images/chess_news_2.png',
-    './images/chess_news_3.png',
-    './images/chess_news_4.png',
-    './images/chess_news_5.png',
-    './images/chess_news_6.png'
+    './images/chess_gallery_1.webp',
+    './images/chess_gallery_2.webp',
+    './images/chess_gallery_3.webp',
+    './images/chess_gallery_4.webp',
+    './images/chess_gallery_5.webp',
+    './images/chess_gallery_6.webp',
+    './images/chess_gallery_7.webp',
+    './images/chess_gallery_8.webp',
 ]
 
 const slideShowSection = {
